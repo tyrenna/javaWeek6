@@ -2,10 +2,10 @@ package javaWeek6;
 
 public class Card {
 	private String name;
-	private int number;
+	private int value;
 	
-	public Card(String name, int number) {
-		this.number = number;
+	public Card(String name, int value) {
+		this.value = value;
 		this.name = name;
 	
 
@@ -16,13 +16,21 @@ public class Card {
 	}
 
 	protected int getNumber() {
-		return number;
+		return value;
+	}
+
+	protected void setName(String name) {
+		this.name = name;
+	}
+
+	protected void setValue(int value) {
+		this.value = value;
 	}
 
 	@Override
 	public String toString() {
 
-		return number + "of" + name;
+		return value + "of" + name;
 	}
 
 

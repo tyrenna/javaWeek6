@@ -1,19 +1,21 @@
 package javaWeek6;
 //Deck
 
+
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Collections;
 
 public class Deck extends LinkedList<Card> {
 	private final List<String> name = List.of("Clubs", "Diamonds", "Hearts", "Spades");
 	
-	private final List<String> number = List.of("2", "3", "4", "5", "6", "7", "8", "9", "10","Jack", "Queen", "King", "Ace");
+	private final List<String> values = List.of("2", "3", "4", "5", "6", "7", "8", "9", "10","Jack", "Queen", "King", "Ace");
 
 	public Deck() {
 		for (int namePos = 0; namePos < name.size(); namePos++) {
-			int number = namePos +1;
+			int rank = namePos +1;
 			String suit = name.get(namePos);
-		
+			
 			}
 	   }
 	
@@ -29,10 +31,19 @@ public class Deck extends LinkedList<Card> {
 		}
 		return b.toString();
 	}
+
+
+
+public void shuffle(List<Card> cards) {
+	Collections.shuffle(cards);
 }
 
 
+public Card draw(List<Card> cards) {
+	return cards.remove(0);
+}
 
+}
 
 		
 		
